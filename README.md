@@ -10,7 +10,7 @@ Add a PushNotifier step to your workflow to send a notification:
     steps:
       # ……your other steps…
       - name: Send push notification
--       id: pushnotifier
+        id: pushnotifier
         uses: bluefirex/pushnotifier-send-action
         with:
           api-token: ${{ secrets.PUSHNOTIFIER_API_TOKEN }}
