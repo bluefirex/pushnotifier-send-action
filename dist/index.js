@@ -32,7 +32,7 @@ var NotificationType;
 })(NotificationType || (NotificationType = {}));
 try {
     // Gather inputs
-    const apiToken = core.getInput('api token'), appToken = core.getInput('app token'), appPackage = core.getInput('package'), deviceIDsRaw = core.getInput('device ids'), notification = core.getInput('notification'), url = core.getInput('url'), silent = core.getInput('silent') == 'true', failOnError = core.getInput('fail on error') == 'true';
+    const apiToken = core.getInput('api-token'), appToken = core.getInput('app-token'), appPackage = core.getInput('package'), deviceIDsRaw = core.getInput('device-ids'), notification = core.getInput('notification'), url = core.getInput('url'), silent = core.getInput('silent') == 'true', failOnError = core.getInput('fail-on-error') == 'true';
     // Log
     core.debug('Sending notification…');
     core.debug(`Notification: ${notification}`);
