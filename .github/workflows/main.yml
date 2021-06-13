@@ -5,6 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     name: Notification Test
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
       - name: Send notification
         uses: ./
         id: pushnotifier
