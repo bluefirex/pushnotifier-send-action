@@ -17,14 +17,14 @@ interface PushNotification {
 
 try {
 	// Gather inputs
-	const apiToken = core.getInput('api token'),
-		appToken = core.getInput('app token'),
+	const apiToken = core.getInput('api-token'),
+		appToken = core.getInput('app-token'),
 		appPackage = core.getInput('package'),
-		deviceIDsRaw = core.getInput('device ids'),
+		deviceIDsRaw = core.getInput('device-ids'),
 		notification = core.getInput('notification'),
 		url = core.getInput('url'),
 		silent = core.getInput('silent') == 'true',
-		failOnError = core.getInput('fail on error') == 'true'
+		failOnError = core.getInput('fail-on-error') == 'true'
 
 	// Log
 	core.debug('Sending notification…')
