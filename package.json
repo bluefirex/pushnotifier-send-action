@@ -1,0 +1,36 @@
+{
+  "name": "pushnotifier-send-github-action",
+  "version": "1.0.0",
+  "description": "A GitHub Action to send notifications using PushNotifier",
+  "main": "index.ts",
+  "scripts": {
+    "run:dev": "npx ts-node src/index.ts",
+    "build:dev": "npm install && tsc",
+    "build:production": "npm run-script build:dev && npm prune --production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bluefirex/pushnotifier-send-action.git"
+  },
+  "keywords": [
+    "pushnotifier",
+    "github",
+    "action"
+  ],
+  "author": "bluefirex <git@bfx.re>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bluefirex/pushnotifier-send-action/issues"
+  },
+  "homepage": "https://github.com/bluefirex/pushnotifier-send-action#readme",
+  "dependencies": {
+    "@actions/core": "^1.4.0",
+    "@actions/github": "^5.0.0",
+    "axios": "^0.21.1",
+    "valid-url": "^1.0.9"
+  },
+  "devDependencies": {
+    "@types/node": "^15.12.2",
+    "typescript": "^4.3.2"
+  }
+}

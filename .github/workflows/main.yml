@@ -1,0 +1,20 @@
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    name: Notification Test
+    steps:
+      - name: Send notification
+        uses: ./
+        id: pushnotifier
+        with:
+          api-token: ${{ secrets.API_TOKEN }}
+          package: ${{ secrets.PACKAGE }}
+          app-token: ${{ secrets.APP_TOKEN }}
+          device-ids: ${{ secrets.DEVICE_IDS }}
+          notification: Build completed
+          url: https://github.com/${{ github.repository }}
+      - name: Fail if not successful
+        if: ${{ steps.pushnotifier.outputs.status }} != 'ok'
+        run: exit 1

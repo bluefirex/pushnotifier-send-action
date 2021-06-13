@@ -1,0 +1,36 @@
+name: PushNotifier Send Action
+description: A GitHub Action to send notifications to iOS, macOS, Android and more using PushNotifier.
+author: bluefirex
+inputs:
+  api-token:
+    description: Your PushNotifier API token, see pushnotifier.de/account/api
+    required: true
+  package:
+    description: Your app's package name, e.g. "com.example.yourapp", see pushnotifier.de/account/api
+    required: true
+  app-token:
+    description: A token from an app for a user. See pushnotifier.de/account/api
+    required: true
+  device-ids:
+    description: Comma-separated IDs (v2) of devices to send to. See pushnotifier.de/devices, click details on any device.
+    required: true
+  notification:
+    description: The notification's content
+    required: true
+  url:
+    description: An optional URL to something
+    required: false
+  silent:
+    description: Deliver a notification without sound
+    required: false
+    default: 'false'
+  fail-on-error:
+    description: If true, job fails if the notification could not be delivered to at leat one device. Defaults to false.
+    required: false
+    default: 'false'
+outputs:
+  status:
+    description: Status of the notification submission
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
