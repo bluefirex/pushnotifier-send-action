@@ -22,5 +22,5 @@ jobs:
           notification: Build completed
           url: https://github.com/${{ github.repository }}
       - name: Fail if not successful
-        if: ${{ steps.pushnotifier.outputs.status }} != 'ok'
+        if: ${{ steps.pushnotifier.outputs.status != 'ok' }}
         run: exit 1
