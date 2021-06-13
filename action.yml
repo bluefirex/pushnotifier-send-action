@@ -1,6 +1,9 @@
 name: PushNotifier Send Action
 description: A GitHub Action to send notifications to iOS, macOS, Android and more using PushNotifier.
 author: bluefirex
+branding:
+  icon: message-square
+  color: purple
 inputs:
   api-token:
     description: Your PushNotifier API token, see pushnotifier.de/account/api
